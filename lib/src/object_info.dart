@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'dart:typed_data';
 
 import 'package:dartx/dartx.dart';
 import 'package:isar/isar.dart';

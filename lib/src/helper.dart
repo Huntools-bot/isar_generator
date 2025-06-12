@@ -28,10 +28,10 @@ extension ClassElementX on ClassElement {
     return [
       ...accessors.mapNotNull((e) => e.variable),
       if (collectionAnnotation?.inheritance ?? embeddedAnnotation!.inheritance)
-        for (InterfaceType supertype in allSupertypes) ...[
+        for (final InterfaceType supertype in allSupertypes) ...[
           if (!supertype.isDartCoreObject)
-            ...supertype.accessors.mapNotNull((e) => e.variable)
-        ]
+            ...supertype.accessors.mapNotNull((e) => e.variable),
+        ],
     ]
         .where(
           (PropertyInducingElement e) =>
